@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.modern-button {
+  background-color: transparent;
+  color: $color-secondary;
+  border: 2px solid $color-secondary;
+  padding: $spacing-xs $spacing-md;
+  border-radius: 30px;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+}
+
+// ... resto del código ...

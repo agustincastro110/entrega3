@@ -1,0 +1,22 @@
+.carousel {
+    margin-bottom: $spacing-xl;
+  
+    &-inner {
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+  
+    &-item {
+      img, video {
+        width: 100%;
+        height: auto;
+        border: $border-width-thick solid $color-secondary;
+        border-radius: $border-radius;
+  
+        @include respond-to(md) {
+          max-height: 600px;
+          object-fit: contain;
+        }
+      }
+    }
+  }

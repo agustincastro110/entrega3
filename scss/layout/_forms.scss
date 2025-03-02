@@ -1,0 +1,30 @@
+.form-control {
+    background-color: $color-gray;
+    border: 1px solid $color-border;
+    color: $color-secondary;
+    padding: $spacing-sm;
+    width: 100%;
+    margin-bottom: $spacing-md;
+  
+    &:focus {
+      background-color: $color-gray;
+      border-color: $color-secondary;
+      color: $color-secondary;
+      box-shadow: none;
+    }
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+  
+    .form-group {
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }

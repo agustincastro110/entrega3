@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.navbar {
+    background-color: $color-primary;
+    padding: $spacing-sm 0;
+  
+    &-brand {
+      img {
+        height: 60px;
+  
+        @include respond-to(md) {
+          height: 40px;
+        }
+      }
+    }
+  
+    &-nav {
+      @include flex(column);
+      
+      @include respond-to(lg) {
+        flex-direction: row;
+      }
+  
+      .nav-link {
+        color: $color-secondary;
+        padding: $spacing-xs $spacing-sm;
+        @include transition;
+  
+        &:hover {
+          color: darken($color-secondary, 20%);
+        }
+      }
+    }
+  
+    &-toggler {
+      border-color: $color-secondary;
+    }
+  }

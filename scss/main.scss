@@ -1,0 +1,77 @@
+
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+
+@use 'base/base';
+
+
+@use 'components/buttons';
+@use 'components/navbar';
+@use 'components/carousel';
+@use 'components/accordion';
+
+
+@use 'layout/forms';
+@use 'layout/footer';
+
+
+body {
+  background-color: $color-primary;
+  color: $color-secondary;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.img-border {
+  border: $border-width-thick solid $color-secondary;
+  border-radius: $border-radius;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: $spacing-md;
+}
+
+.my-5 {
+  margin: $spacing-lg 0;
+}
+
+.py-4 {
+  padding: $spacing-md 0;
+}
+
+.row {
+  @include flex(column);
+  margin: 0 #{$spacing-sm * -1};  
+
+  @include respond-to(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.col-12 {
+  width: 100%;
+  padding: 0 $spacing-sm;
+}
+
+@include respond-to(md) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
